@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     
     body {
         margin: 0;
-        font-family: monospace;
+        font-family: "Sen", monospace;
     }
     
     a {
