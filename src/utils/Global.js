@@ -2,6 +2,7 @@ import {createGlobalStyle} from "styled-components";
 
 import {normalize} from 'polished';
 import {rustyRed} from "./colors";
+import {primaryFont} from "./typography";
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -19,11 +20,13 @@ export const GlobalStyle = createGlobalStyle`
     
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
+      font-weight: lighter;
     }
     
     body {
         margin: 0;
-        font-family: "Sen", monospace;
+        font-family: ${primaryFont};
+        font-weight: lighter;
     }
     
     a {
