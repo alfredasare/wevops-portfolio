@@ -1,11 +1,12 @@
 import React from "react";
 import './home.styles';
+import LandingComponent from "../../components/landing/landing.component";
 
 const Home = () => {
     return (
-        <h1>
-            HOME
-        </h1>
+        <>
+            <LandingComponent />
+        </>
     );
 };
 

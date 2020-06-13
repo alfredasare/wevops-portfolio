@@ -1,5 +1,7 @@
 import {createGlobalStyle} from "styled-components";
+
 import {normalize} from 'polished';
+import {rustyRed} from "./colors";
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -15,6 +17,10 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: inherit;
     }
     
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+    
     body {
         margin: 0;
         font-family: "Sen", monospace;
@@ -25,7 +31,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     .active {
-        color: black;
+        color: ${rustyRed};
     }
     
     .hide-overflow {
