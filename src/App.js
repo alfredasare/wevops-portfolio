@@ -4,6 +4,8 @@ import './App.css';
 import {GlobalStyle} from "./utils/Global";
 import LoadingScreen from "./components/loading-screen/loading-screen.component";
 import ScrollToTop from "./utils/scroll-to-top";
+import "../src/utils/animations.css";
+import "../src/utils/animations";
 
 const Home = lazy(() => import("./pages/home/home"));
 const Works = lazy(() => import("./pages/works/works"));

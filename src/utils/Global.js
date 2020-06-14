@@ -26,9 +26,12 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         font-family: ${primaryFont};
     }
-   *{
-   font-weight: lighter;
-   }
+    *{
+    font-weight: lighter;
+    }
+    *{
+    font-weight: lighter;
+    }
     
     a {
         text-decoration: none;
