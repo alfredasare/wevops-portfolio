@@ -2,7 +2,6 @@ let animationList = [];
 document.onreadystatechange = function () {
     if (document.readyState === 'complete') {
         animationList = document.querySelectorAll('[data-soa]');
-        console.log(animationList);
         animationList.forEach(animate => {
             switch (animate.getAttribute('data-soa')) {
                 case 'text-animate':

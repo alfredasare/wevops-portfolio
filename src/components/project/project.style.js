@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {fadedBlack} from "../../utils";
+import {fadedBlack, typeScale} from "../../utils";
 
 export const ProjectWrapper = styled.div`
   width: 85%;
@@ -39,7 +39,17 @@ export const ImageContainer = styled.div`
   transition: all 0.2s ease-out;
 `;
 export const ProjectLogo = styled.img`
-  width: 9rem;
+  width: 5rem;
   position: absolute;
   z-index: 2;
+  @media only screen and (min-width: 600px){
+    width: 9rem;
+  }
+`;
+export const ProjectReason = styled.h4`
+  font-size: ${typeScale.header4};
+  color: white;
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
 `;

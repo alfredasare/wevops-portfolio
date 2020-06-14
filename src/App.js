@@ -21,7 +21,8 @@ function App() {
         <NavBar />
         <Switch>
             <Route exact path='/' component={Home} />
-            <Route path='/works' component={Works} />
+            <Route path='/works' exact={true} component={Works} />
+            <Route path='/works:project' component={Works}/>
         </Switch>
       </Suspense>
     </div>

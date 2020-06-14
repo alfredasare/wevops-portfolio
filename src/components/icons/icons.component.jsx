@@ -24,7 +24,7 @@ export const WevopsLogo = () => {
               <style>{`.cls-1{fill:#fff;}.cls-2{fill:url(#linear-gradient);}.cls-3{fill:url(#linear-gradient-2);}.cls-4{fill:url(#linear-gradient-3);}.cls-5{fill:url(#linear-gradient-4);}.cls-6{fill:url(#linear-gradient-5);}`}</style>
               <linearGradient id="linear-gradient" x1="560.86" y1="115.53" x2="585.88" y2="260.49"
                               gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#fff"/>
+                  <stop offset="0" stopColor="#fff"/>
                   <stop offset="1"/>
               </linearGradient>
               <linearGradient id="linear-gradient-2" x1="337.05" y1="152.72" x2="362.07" y2="297.68"
