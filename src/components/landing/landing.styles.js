@@ -36,10 +36,18 @@ export const LandingFooter = styled.div`
   margin: 0 auto;
   position: absolute;
   bottom: 5rem;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 export const LandingFooterLink = styled.a`
-  color: white;
-  
+  color: white; 
+`;
+
+export const ScrollIconWrapper = styled.div`
+  margin-right: 10px;
+ & > svg{
+ fill: white;
+ width: ${typeScale.paragraph};
+ }
 `;

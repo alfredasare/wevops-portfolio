@@ -4,24 +4,28 @@ import {
     LandingContainer,
     LandingFooter,
     LandingFooterLink,
-    MainContent,
+    MainContent, ScrollIconWrapper,
     SubContent,
     SubContentText
 } from "./landing.styles";
+import {ScrollDownIcon} from "../icons/icons.component";
 
 const LandingComponent = () => {
 
     return (
         <LandingContainer>
             <MainContent>
-                <FadedH5>Welcome to wevops</FadedH5>
+                <FadedH5 data-soa="fade-in">Welcome to wevops</FadedH5>
                 <SubContent>
-                    <SubContentText>
+                    <SubContentText data-soa="text-animate">
                         We offer high-quality UI/UX designs and websites tailor-made to your requirements
                     </SubContentText>
                 </SubContent>
             </MainContent>
             <LandingFooter>
+                <ScrollIconWrapper data-soa="scroll-down">
+                    <ScrollDownIcon/>
+                </ScrollIconWrapper>
                 <LandingFooterLink>scroll down</LandingFooterLink>
             </LandingFooter>
         </LandingContainer>

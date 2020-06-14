@@ -8,6 +8,12 @@ document.onreadystatechange = function () {
                 case 'text-animate':
                     textAnimate(animate);
                     break;
+                case 'fade-in' :
+                    fadeIn(animate);
+                    break;
+                case 'scroll-down' :
+                    scrollDown(animate);
+                    break;
                 default :
                     console.log('nothing');
             }
@@ -21,6 +27,7 @@ document.onreadystatechange = function () {
 const textAnimate = (element) => {
     const speed = 80; //ms
     let i = 0;
+    element.style.minHeight = element.offsetHeight + "px";
     const wordArray = element.textContent.split(' ');
     element.textContent = '';
     setInterval(() => {
@@ -34,3 +41,10 @@ const textAnimate = (element) => {
     }, speed);
 };
 
+const fadeIn = (element) => {
+    element.style.animation = 'text-appear 1s ease-in-out both';
+};
+
+const scrollDown = (element) => {
+    element.style.animation = 'back-front 1.5s ease-in-out both infinite, text-appear 1.5s ease-in-out both infinite reverse';
+};

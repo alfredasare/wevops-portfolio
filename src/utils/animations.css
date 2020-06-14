@@ -8,7 +8,23 @@
         opacity: 1;
     }
 }
+@keyframes text-appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .span-animate{
     display: inline-block;
     animation: text-move-up 1s ease-in-out 1s both;
+}
+@keyframes  back-front{
+    from{
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(20px);
+    }
 }

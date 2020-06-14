@@ -5,7 +5,7 @@ import {PageTitle, TitleHeader, TitleText} from "./header.style";
 const Header = () => {
     return (
         <PageTitle>
-            <TitleHeader>Projects</TitleHeader>
+            <TitleHeader data-soa="fade-in">Projects</TitleHeader>
             <TitleText data-soa="text-animate">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias
             </TitleText>
