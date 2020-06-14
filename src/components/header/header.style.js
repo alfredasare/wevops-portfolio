@@ -5,7 +5,7 @@ export const PageTitle = styled.div`
   width: 100%;
   color: white;
   background-color: black;
-  padding: 70px 10%;
+  padding: 70px 10% 35px;
   & *{
   margin: 0;
   }

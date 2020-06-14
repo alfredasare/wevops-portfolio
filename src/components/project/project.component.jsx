@@ -1,10 +1,14 @@
 import React from "react";
-import {ProjectContainer} from "./project.style";
+import {ImageContainer, ProjectLogo, ProjectWrapper} from "./project.style";
 
-const Project = () => {
+const Project = ({image, projectName, logo}) => {
     return (
-        <ProjectContainer>
-        </ProjectContainer>
+        <ProjectWrapper>
+            <ImageContainer image={image}>
+            </ImageContainer>
+            <ProjectLogo src={logo} alt="project logo"/>
+        </ProjectWrapper>
+
     )
 };
 
