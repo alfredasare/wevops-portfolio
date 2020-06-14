@@ -4,7 +4,8 @@ export const ProjectListWrapper = styled.section`
   background-color: black;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding: 35px 0;
 `;

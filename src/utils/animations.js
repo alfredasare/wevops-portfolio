@@ -46,5 +46,6 @@ const fadeIn = (element) => {
 };
 
 const scrollDown = (element) => {
-    element.style.animation = 'back-front 1.5s ease-in-out both infinite, text-appear 1.5s ease-in-out both infinite reverse';
+    element.style.animation = 'back-front 1.5s ease-in-out both infinite,' +
+        ' text-appear 1.5s ease-in-out both infinite reverse';
 };
