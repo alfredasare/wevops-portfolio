@@ -1,8 +1,8 @@
 import React from "react";
 import {
     Address,
-    ContactRow,
-    FooterContainer,
+    ContactRow, CopyRight, CopyRightRow, CopyRightText, EmailTelContainer, EmailTelItem,
+    FooterContainer, FooterNavLinkItem, FooterNavLinks,
     FooterStatement,
     FooterStatementHeader,
     SocialMediaContainer, SocialMediaLink, SocialMediaLinkItem, SocialMediaUl
@@ -19,8 +19,8 @@ const Footer = () => {
             </FooterStatement>
             <ContactRow>
                 <Address>
-                    Located at Lashibi and Abossey-Okai,
-                    Accra
+                    <p>Located at Lashibi Community 19, Accra</p>
+                    <p>or Abossey Okai, Accra</p>
                 </Address>
                 <SocialMediaContainer>
                     <SocialMediaUl>
@@ -38,7 +38,22 @@ const Footer = () => {
                         </SocialMediaLinkItem>
                     </SocialMediaUl>
                 </SocialMediaContainer>
+                <EmailTelContainer>
+                    <EmailTelItem>wevops@gmail.com</EmailTelItem>
+                    <EmailTelItem>+233501429666</EmailTelItem>
+                </EmailTelContainer>
             </ContactRow>
+            <CopyRightRow>
+                <CopyRight>
+                    <CopyRightText>Developed by wevops &copy; 2020</CopyRightText>
+                </CopyRight>
+                <FooterNavLinks>
+                    <FooterNavLinkItem href="/#">Home</FooterNavLinkItem>
+                    <FooterNavLinkItem href="/#">Projects</FooterNavLinkItem>
+                    <FooterNavLinkItem href="/#">Privacy</FooterNavLinkItem>
+                    <FooterNavLinkItem href="/#">Security</FooterNavLinkItem>
+                </FooterNavLinks>
+            </CopyRightRow>
         </FooterContainer>
     );
 };

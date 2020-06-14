@@ -2,8 +2,18 @@ import React from "react";
 import {
     AboutSectionContainer,
     AboutSectionContent,
-    AboutSectionFadedHead, AboutSectionImage, AboutSectionImageContainer, AboutSectionMainHead, AboutSectionText,
-    AboutSectionTextContainer
+    AboutSectionFadedHead,
+    AboutSectionImage,
+    AboutSectionImageContainer,
+    AboutSectionMainHead,
+    AboutSectionText,
+    AboutSectionTextContainer,
+    ButtonRightSpan,
+    ButtonRightIcon,
+    NextDarkButton,
+    PreviousDarkButton,
+    ButtonLeftIcon,
+    ButtonLeftSpan
 } from "./about.styles";
 
 
@@ -22,6 +32,14 @@ const AboutSection = () => {
                 </AboutSectionTextContainer>
                 <AboutSectionImageContainer>
                     <AboutSectionImage src={require('../../assets/images/about-section.jpg')} alt="mac book pro and diary"/>
+                    <NextDarkButton>
+                        <ButtonRightIcon className="fa far fa-arrow-right"/>
+                        <ButtonRightSpan>Next</ButtonRightSpan>
+                    </NextDarkButton>
+                    <PreviousDarkButton>
+                        <ButtonLeftSpan>Previous</ButtonLeftSpan>
+                        <ButtonLeftIcon className="fa far fa-arrow-left"/>
+                    </PreviousDarkButton>
                 </AboutSectionImageContainer>
             </AboutSectionContent>
         </AboutSectionContainer>
