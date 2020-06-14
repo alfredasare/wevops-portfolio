@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {NavBarBrand, NavBarContainer, NavBarRow, NavMenuContainer, NavMenuIcon, NavMenuText} from "./navbar.styles";
 import Burger from "../burger/burger.component";
 import OverlayMenu from "../menu/overlay-menu.component";
+import {WevopsLogo} from "../icons/icons.component";
 
 const NavBar = () => {
 
@@ -11,7 +12,9 @@ const NavBar = () => {
         <NavBarContainer>
             <NavBarRow>
                 <OverlayMenu open={open} setOpen={setOpen}/>
-                <NavBarBrand href="/">wevops</NavBarBrand>
+                <NavBarBrand href="/">
+                    <WevopsLogo alt="wevops logo"/>
+                </NavBarBrand>
                 <NavMenuContainer>
                     <NavMenuText onClick={() => setOpen(!open)}>menu</NavMenuText>
                     <NavMenuIcon>

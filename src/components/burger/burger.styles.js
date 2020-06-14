@@ -25,7 +25,7 @@ export const StyledBurger = styled.button`
     position: relative;
     transform-origin: 1px;
     :first-child {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => open ? 'rotate(43deg)' : 'rotate(0)'};
     }
     :nth-child(2) {
       height: 0;
@@ -33,7 +33,7 @@ export const StyledBurger = styled.button`
       transform: ${({ open }) => open ? 'translateX(27px)' : 'translateX(0)'};
     }
     :last-child {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => open ? 'rotate(-43deg)' : 'rotate(0)'};
     }
   }
 `;

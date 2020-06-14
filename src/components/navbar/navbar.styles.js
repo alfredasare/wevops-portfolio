@@ -25,9 +25,20 @@ export const NavBarRow = styled.div`
 `;
 
 export const NavBarBrand = styled.a`
-  font-size: ${typeScale.header5};
+  width: 50px;
+  transition: all 1s ease-in-out;
+  animation: rotate-logo 1s ease-in-out both;
   z-index: 10;
-  color: white;
+  @keyframes rotate-logo {
+  from{
+  opacity: 0;
+  transform: rotate(30deg);
+  }
+  to{
+  opacity: 1;
+  transform: rotate(0);
+  }
+  }
 `;
 
 export const NavMenuContainer = styled.div`
