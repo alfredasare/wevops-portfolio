@@ -25,6 +25,10 @@ export const StyledMenu = styled.div`
   animation:  ${({ open }) => open ? 'slide-right 0.8s ease-in-out 0.3s both,' +
     'color-change 0.5s ease-out 1.3s both' : 'none'};
   }
+  
+  @media screen and (max-width: 520px) {
+    height: 115vh;
+  }
 `;
 export const MenuContent = styled.h4`
   color: white;

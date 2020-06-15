@@ -50,8 +50,8 @@ const Footer = () => {
                 <FooterNavLinks>
                     <FooterNavLinkItem href="/#">Home</FooterNavLinkItem>
                     <FooterNavLinkItem href="/#">Projects</FooterNavLinkItem>
-                    <FooterNavLinkItem href="/#">Privacy</FooterNavLinkItem>
-                    <FooterNavLinkItem href="/#">Security</FooterNavLinkItem>
+                    <FooterNavLinkItem href="/#">About</FooterNavLinkItem>
+                    <FooterNavLinkItem href="/#">Contact</FooterNavLinkItem>
                 </FooterNavLinks>
             </CopyRightRow>
         </FooterContainer>

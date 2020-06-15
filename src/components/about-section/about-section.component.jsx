@@ -27,6 +27,7 @@ const AboutSection = () => {
                     <AboutSectionText>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex excepturi, id iure
                         molestiae molestias mollitia nam necessitatibus neque nulla obcaecati perferendis porro
+                        praesentium quaerat tempora vitae voluptas voluptate voluptatem! necessitatibus neque nulla obcaecati perferendis porro
                         praesentium quaerat tempora vitae voluptas voluptate voluptatem!
                     </AboutSectionText>
                 </AboutSectionTextContainer>

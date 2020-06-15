@@ -24,10 +24,18 @@ export const FadedH5 = styled.h5`
 export const SubContent = styled.div`
   color: white;
   width: 70%;
+  
+  @media screen and (max-width: 520px) {
+    width: 100%;
+  }
 `;
 
 export const SubContentText = styled.h3`
   font-size: ${typeScale.header3};
+  
+  @media screen and (max-width: 520px) {
+    font-size: ${typeScale.header5};
+  }
 `;
 
 export const LandingFooter = styled.div`
