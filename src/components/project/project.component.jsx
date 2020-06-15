@@ -1,5 +1,6 @@
 import React from "react";
 import {ImageContainer, ProjectLogo, ProjectReason, ProjectWrapper} from "./project.style";
+import {Link} from "react-router-dom";
 
 const Project = ({image, projectName, logo}) => {
 
@@ -11,15 +12,16 @@ const Project = ({image, projectName, logo}) => {
     };
 
     return (
-        <ProjectWrapper onClick={projectClick}>
-            <ImageContainer image={image}>
-            </ImageContainer>
-            <ProjectLogo src={logo} alt="project logo" id={`logo${projectName}`}/>
-            <ProjectReason id={`reason${projectName}`}>
-                Web design for {projectName}
-            </ProjectReason>
-        </ProjectWrapper>
-
+        <Link to={`/works/${projectName}`}>
+            <ProjectWrapper onClick={projectClick}>
+                <ImageContainer image={image}>
+                </ImageContainer>
+                <ProjectLogo src={logo} alt="project logo" id={`logo${projectName}`}/>
+                <ProjectReason id={`reason${projectName}`}>
+                    Web design for {projectName}
+                </ProjectReason>
+            </ProjectWrapper>
+        </Link>
     )
 };
 

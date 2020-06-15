@@ -137,10 +137,8 @@ export const CopyRightRow = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 80%;
-  position: absolute;
+  width: 100%;
   bottom: 5rem;
-  left: 10%;
   padding-bottom: 50px;
   
   @media screen and (max-width: 360px) {

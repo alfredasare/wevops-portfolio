@@ -4,10 +4,12 @@ import LandingComponent from "../../components/landing/landing.component";
 import AboutSection from "../../components/about-section/about-section.component";
 import TeamDescription from "../../components/team-description/team-description.component";
 import Footer from "../../components/footer/footer.component";
+import NavBar from "../../components/navbar/navbar.component";
 
 const Home = () => {
     return (
         <>
+            <NavBar />
             <LandingComponent />
             <AboutSection />
             <TeamDescription />
