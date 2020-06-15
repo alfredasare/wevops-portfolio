@@ -51,6 +51,7 @@ export const NavMenuContainer = styled.div`
 export const NavMenuText = styled.h5`
   font-size: ${typeScale.header5};
   margin-right: 1rem;
+  cursor: pointer;
 `;
 
 export const NavMenuIcon = styled.div``;

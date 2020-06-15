@@ -19,7 +19,7 @@ import {
 
 const AboutSection = () => {
     return (
-        <AboutSectionContainer>
+        <AboutSectionContainer id="about">
             <AboutSectionContent>
                 <AboutSectionTextContainer>
                     <AboutSectionFadedHead>What we do</AboutSectionFadedHead>

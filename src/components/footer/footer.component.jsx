@@ -11,7 +11,7 @@ import {
 const Footer = () => {
 
     return (
-        <FooterContainer>
+        <FooterContainer id="contact">
             <FooterStatement>
                 <FooterStatementHeader>
                     Contact us so we can create something beautiful together

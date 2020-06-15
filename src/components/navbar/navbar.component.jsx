@@ -16,7 +16,9 @@ const NavBar = () => {
                     <WevopsLogo alt="wevops logo"/>
                 </NavBarBrand>
                 <NavMenuContainer>
-                    <NavMenuText onClick={() => setOpen(!open)}>menu</NavMenuText>
+                    <NavMenuText onClick={() => setOpen(!open)}>
+                        {open ?  `close` : `menu`}
+                    </NavMenuText>
                     <NavMenuIcon>
                         <Burger open={open} setOpen={setOpen}/>
                     </NavMenuIcon>
