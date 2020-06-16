@@ -1,15 +1,17 @@
-import React from "react";
+import React, {useContext} from "react";
 import {ProjectListWrapper} from "./project-list.style";
 import Project from "../project/project.component";
-import {projectDetails} from "../../utils/project-details";
+import PortfolioContext from "../../contexts/portfolio/portfolio.context";
 
 const ProjectList = () => {
+    const portfolioData = useContext(PortfolioContext);
+
     return (
         <ProjectListWrapper>
             {
-                projectDetails.map((project, index) => {
-                    return <Project image={project.image} projectName={project.projectName}
-                                    logo={project.logo} key={[project.index]}/>
+                portfolioData.map((project, index) => {
+                    return <Project image={project.projectResources[0].image} projectName={project.projectName}
+                                    logo={project.logo} key={[project.id]}/>
                 })
             }
         </ProjectListWrapper>

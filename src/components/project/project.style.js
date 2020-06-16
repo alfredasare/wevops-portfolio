@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {fadedBlack, typeScale} from "../../utils";
 
 export const ProjectWrapper = styled.div`
-  width: 85%;
+  width: 85vw;
   height: 280px;
   position: relative;
    display: flex;
@@ -51,5 +51,4 @@ export const ProjectReason = styled.h4`
   color: white;
   position: absolute;
   z-index: 3;
-  opacity: 0;
 `;
