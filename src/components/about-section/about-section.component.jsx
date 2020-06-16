@@ -17,34 +17,30 @@ import {
     ButtonLeftSpan
 } from "./about.styles";
 import AboutContext from "../../contexts/about-section/about-section.context";
+import {togglePreviousButton} from "../../utils/togglePreviousButton";
 
 
 const AboutSection = () => {
 
     const car = useRef(null);
     const [controller, setController] = useState(null);
-    const [previousHidden, setPreviousHidden] = useState(true);
     const aboutData = useContext(AboutContext);
-    let count = 0;
 
     useEffect(() => {
         setController(car);
-    }, [controller, previousHidden])
+    })
 
 
     const next = () => {
         controller.current.next(500);
-        setPreviousHidden(false);
-
-        console.log(previousHidden);
     };
 
     const previous = () => {
         controller.current.prev(500);
-        if (count === 0) {
-            setPreviousHidden(false);
-        }
-        console.log(count);
+    };
+
+    const updateButtonVisibility = event => {
+        togglePreviousButton();
     };
 
     const options = {
@@ -68,10 +64,14 @@ const AboutSection = () => {
         },
     };
 
+    const events = {
+        onTranslated: (event) => updateButtonVisibility(event)
+    };
+
     return (
         <AboutSectionContainer id="about">
             <AboutSectionContent>
-                <OwlCarousel ref={car} className="owl-theme" {...options}>
+                <OwlCarousel ref={car} className="owl-theme" {...options} {...events}>
                     {
                         aboutData.map(item => (
                             <AboutSectionTextContainer key={item.id}>
@@ -92,7 +92,7 @@ const AboutSection = () => {
                         <ButtonRightIcon className="fa far fa-arrow-right"/>
                         <ButtonRightSpan>Next</ButtonRightSpan>
                     </NextDarkButton>
-                    <PreviousDarkButton previousHidden={previousHidden} count={count} onClick={previous}>
+                    <PreviousDarkButton className="previous-button" onClick={previous}>
                         <ButtonLeftSpan>Previous</ButtonLeftSpan>
                         <ButtonLeftIcon className="fa far fa-arrow-left"/>
                     </PreviousDarkButton>

@@ -137,13 +137,16 @@ export const PreviousDarkButton = styled.button`
   border: none;
   z-index: 2;
   position: absolute;
-  left: -5.02rem;
+  left: -5.1rem;
   bottom: 0;
   cursor: pointer;
-  display: ${({previousHidden}) => previousHidden ? 'none': 'flex'};
+  display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
   
   
     &:hover {
