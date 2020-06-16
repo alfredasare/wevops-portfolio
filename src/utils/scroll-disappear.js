@@ -9,7 +9,7 @@ window.onscroll = () => {
             navbar.style.padding = "50px 0";
         }
 
-        if (previousScrollPosition > currentScrollPosition || currentScrollPosition < "300") {
+        if (previousScrollPosition > currentScrollPosition || currentScrollPosition < "200") {
             navbar.style.top = "0";
         }else {
             navbar.style.top = "-132px";

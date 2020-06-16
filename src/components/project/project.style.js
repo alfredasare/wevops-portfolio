@@ -51,5 +51,4 @@ export const ProjectReason = styled.h4`
   color: white;
   position: absolute;
   z-index: 3;
-  opacity: 0;
 `;
