@@ -25,12 +25,12 @@ export const AboutSectionTextContainer = styled.div`
   
   @media screen and (max-width: 360px) {
     width: 100%;
-    margin-top: 10rem;
+    margin-top: 15rem;
   }
 
   @media screen and (min-width: 361px) and (max-width: 768px) {
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 8rem;
   }
 `;
 
@@ -65,6 +65,7 @@ export const AboutSectionImageContainer = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
+  z-index: 1;
   
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -139,7 +140,7 @@ export const PreviousDarkButton = styled.button`
   left: -5.02rem;
   bottom: 0;
   cursor: pointer;
-  display: none;
+  display: ${({previousHidden}) => previousHidden ? 'none': 'flex'};
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -155,9 +156,13 @@ export const PreviousDarkButton = styled.button`
         }
     }
   
-  &:focus {
-    outline: none;
-  }
+    &:focus {
+      outline: none;
+    }
+    
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
 `;
 
 export const ButtonLeftIcon = styled.i`

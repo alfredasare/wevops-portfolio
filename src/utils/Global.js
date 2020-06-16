@@ -37,12 +37,20 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
     
-    .active {
+    .nav-link-active {
         color: ${rustyRed};
     }
     
     .hide-overflow {
       overflow-y: hidden;
+    }
+    
+    .owl-theme .owl-dots .owl-dot {
+        outline-color: black;
+    }
+    
+    .owl-theme .owl-dots {
+        text-align: left;
     }
     
 `;
