@@ -13,8 +13,12 @@ export const PageTitle = styled.div`
 export const TitleHeader = styled.h5`
   font-size: ${typeScale.header5};
   color: ${fadedBlack};
+  opacity: 0;
   margin-bottom: 20px;
 `;
 export const TitleText = styled.h4`
   font-size: ${typeScale.header4};
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
 `;

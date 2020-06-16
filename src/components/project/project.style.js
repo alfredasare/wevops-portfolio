@@ -1,14 +1,13 @@
 import styled from "styled-components";
-import {fadedBlack, typeScale} from "../../utils";
+import {typeScale} from "../../utils";
 
 export const ProjectWrapper = styled.div`
-  width: 85vw;
-  height: 280px;
   position: relative;
    display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  border-radius: 4px;
   cursor: pointer;
   &:hover >:first-child{
   transform: scale(0.97);
@@ -23,20 +22,16 @@ export const ProjectWrapper = styled.div`
   height: 100%;
   }
   }
-   @media only screen and (min-width: 600px){
-    height: 90vh;
-  }
 `;
 export const ImageContainer = styled.div`
-  width: 100%;
-  height: 100%;
   border-radius: 4px;
-  background-color: ${fadedBlack};
-  background-image: url(${props => props.image});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   transition: all 0.2s ease-out;
+`;
+export const Image = styled.img`
+  border-radius: 4px;
+  width: 85vw;
+  max-height: 90vh;
+  object-fit: cover;
 `;
 export const ProjectLogo = styled.img`
   width: 5rem;

@@ -19,11 +19,12 @@ export const FadedH5 = styled.h5`
   color: ${fadedBlack};
   font-size: ${typeScale.header5};
   margin-bottom: 20px;
+  opacity: 0;
 `;
 
 export const SubContent = styled.div`
   color: white;
-  width: 70%;
+  width: 75%;
   
   @media screen and (max-width: 520px) {
     width: 100%;
@@ -32,7 +33,8 @@ export const SubContent = styled.div`
 
 export const SubContentText = styled.h3`
   font-size: ${typeScale.header3};
-  
+  opacity: 0;
+  transform: translateY(50px);
   @media screen and (max-width: 520px) {
     font-size: ${typeScale.header5};
   }
@@ -54,6 +56,7 @@ export const LandingFooterLink = styled.a`
 
 export const ScrollIconWrapper = styled.div`
   margin-right: 10px;
+  transform: translateY(-20px);
  & > svg{
  fill: white;
  width: ${typeScale.paragraph};

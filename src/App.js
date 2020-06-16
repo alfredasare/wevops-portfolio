@@ -5,7 +5,6 @@ import {GlobalStyle} from "./utils";
 import ScrollToTop from "./utils/scroll-to-top";
 import "./utils/scroll-disappear";
 import "../src/utils/animations.css";
-import "../src/utils/animations";
 import ProjectPage from "./pages/project-page/project-page";
 import Works from "./pages/works/works";
 import Home from "./pages/home/home";
