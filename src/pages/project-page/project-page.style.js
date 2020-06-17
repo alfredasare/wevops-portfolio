@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {NavBarBrand} from "../../components/navbar/navbar.styles";
 import {ProjectReason} from "../../components/project/project.style";
-import {fadedBlack} from "../../utils";
+import {fadedBlack, typeScale} from "../../utils";
 
 
 export const ProjectPageWrapper = styled.div`
@@ -87,4 +87,55 @@ export const Indicator = styled.div`
   position: absolute;
   left: 50%;
   bottom: 30%;
+`;
+export const LinkSection = styled.div`
+  width: 90%;
+  height: 50vh;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  background-color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+`;
+export const LinkText = styled.h3`
+  color: black;
+  font-size: ${typeScale.header3};
+  transition: all ease-in-out 0.5s;
+  cursor: pointer;
+  & *{
+    color: black;
+  }
+  & *:hover{
+  color: ${fadedBlack};
+  }
+  &:hover ~ *{
+  fill: ${fadedBlack};
+  }
+`;
+export const LinkIcon =  styled.div`
+  & > svg{
+  color: black;
+  width: 50px;
+  margin-left: 30px;
+  transform: rotate(90deg);
+  overflow: visible;
+  }
+  & > svg .hook-low{
+  animation: move-out 1s both alternate infinite;
+  }
+  & > svg .hook-high{
+  animation: move-in 1s both alternate infinite;
+  }
+  @keyframes move-out{
+  0%{transform: translateX(0)}
+  100%{transform: translateX(100px);}
+  }
+  @keyframes move-in{
+  0%{transform: translateX(0)}
+  100%{transform: translateX(-100px);}
+  }
+
 `;

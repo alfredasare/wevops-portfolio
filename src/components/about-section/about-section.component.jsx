@@ -28,7 +28,7 @@ const AboutSection = () => {
 
     useEffect(() => {
         setController(car);
-    })
+    },[setController]);
 
 
     const next = () => {

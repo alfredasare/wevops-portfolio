@@ -4,25 +4,25 @@ import {
     HeroImage, HeroWrapper,
     Icon,
     ImageOverlay,
-    Indicator,
+    Indicator, LinkIcon, LinkSection, LinkText,
     ProjectPageWrapper,
-    ProjectReason2
+    ProjectReason2,
 } from "./project-page.style";
 import PortfolioContext from "../../contexts/portfolio/portfolio.context";
-import {Close, WevopsLogo} from "../../components/icons/icons.component";
+import {Close, LinkSvg, WevopsLogo} from "../../components/icons/icons.component";
 import {gsap, ScrollTrigger, Power3} from "gsap/all";
 import {Link} from "react-router-dom";
+import SectionList from "../../components/section-list/section-list.component";
 
 const ProjectPage = ({match}) => {
     let reason = useRef(null);
     let indicator = useRef(null);
 
-    let heroImage = '';
-    let projectName = '';
-    let section1 = '';
-    let section2 = '';
-    let section3 = '';
-    let section4 = '';
+    let heroImage = false;
+    let projectName = false;
+    let webLink = '';
+    let projectResources = [];
+
 
     const portfolioData = useContext(PortfolioContext);
 
@@ -30,7 +30,6 @@ const ProjectPage = ({match}) => {
 
 
     useEffect(() => {
-        console.log(reason);
         gsap.from(reason, {opacity: 1, duration: 0.6, scale: 0.3});
         gsap.to(indicator, {duration: 2, y: 50, opacity: 0, ease: Power3.easeOut, repeatDelay: 0.2, repeat: -1});
         gsap.to(reason, {
@@ -44,8 +43,10 @@ const ProjectPage = ({match}) => {
 
     portfolioData.forEach(project => {
         if (project.projectName === match.params.project) {
-            heroImage = project.projectResources[0].image;
+            heroImage = project.hero;
             projectName = project.projectName;
+            projectResources = project.projectResources;
+            webLink = project.websiteLink;
         }
     });
     return (
@@ -67,7 +68,19 @@ const ProjectPage = ({match}) => {
             </Link>
             <HeroImage image={heroImage}>
             </HeroImage>
+            <SectionList resources={projectResources}/>
+            <LinkSection>
+                <LinkText><a href={webLink} aria-label={`link to ${projectName}`} target="_blank"
+                             rel="noopener noreferrer">
+                    Visit {projectName}
+                </a>
+                </LinkText>
+                <LinkIcon>
+                    <LinkSvg/>
+                </LinkIcon>
+            </LinkSection>
         </ProjectPageWrapper>
+
     )
 };
 

@@ -1,7 +1,6 @@
 import React, {useEffect, useRef} from "react";
 import {PageTitle, TitleHeader, TitleText} from "./header.style";
 import {gsap} from "gsap/all";
-import {SubContentText} from "../landing/landing.styles";
 
 
 

@@ -10,7 +10,7 @@ const ProjectList = () => {
         <ProjectListWrapper>
             {
                 portfolioData.map((project, index) => {
-                    return <Project image={project.projectResources[0].image} projectName={project.projectName}
+                    return <Project image={project.hero} projectName={project.projectName}
                                     logo={project.logo} key={[project.id]}/>
                 })
             }
