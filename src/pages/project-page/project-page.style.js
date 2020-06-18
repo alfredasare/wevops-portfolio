@@ -38,7 +38,7 @@ export const ImageOverlay = styled.div`
 export const Icon = styled(NavBarBrand)`
   position: fixed;
   left: 10px;
-  top: 50%;
+  top: 5%;
   width: 35px;
 `;
 export const CloseButton = styled.div`
@@ -50,7 +50,7 @@ export const CloseButton = styled.div`
   background: white;
   border-radius: 50%;
   position: fixed;
-  top: 50%;
+  top: 5%;
   right: 10px;
   cursor: pointer;
   transition: background-color 0.4s ease-in-out;
@@ -59,6 +59,9 @@ export const CloseButton = styled.div`
   }
   &:hover{
   background-color: ${fadedBlack}
+  }
+  @media only screen and (min-width: 600px){
+    top: 50%;
   }
 `;
 export const ProjectReason2 = styled(ProjectReason)`
@@ -99,7 +102,7 @@ export const LinkSection = styled.div`
 `;
 export const LinkText = styled.h3`
   color: black;
-  font-size: ${typeScale.header3};
+  font-size: 6vw;
   transition: all ease-in-out 0.5s;
   cursor: pointer;
   & *{
@@ -115,7 +118,7 @@ export const LinkText = styled.h3`
 export const LinkIcon = styled.div`
   & > svg{
   color: black;
-  width: 50px;
+  width: 5vw;
   margin-top: 30px;
   transform: rotate(90deg);
   overflow: visible;
@@ -161,12 +164,12 @@ export const Next = styled.div`
   filter: blur(0);
   }
 `;
-export const NextTitle = styled.h5`
-  font-size: ${typeScale.header5};
+export const NextTitle = styled.p`
+  font-size: ${typeScale.paragraph};
   color: white;
   position: absolute;
   left: 10%;
-  top: 10px;
+  top: 5px;
   z-index: 2;
 `;
 export const NextText = styled(NextTitle)`

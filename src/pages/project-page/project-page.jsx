@@ -12,6 +12,7 @@ import PortfolioContext from "../../contexts/portfolio/portfolio.context";
 import {Close, LinkSvg, WevopsLogo} from "../../components/icons/icons.component";
 import {gsap, ScrollTrigger, Power3} from "gsap/all";
 import {Link} from "react-router-dom";
+import "../../utils/scroll-disappear";
 import SectionList from "../../components/section-list/section-list.component";
 
 const ProjectPage = ({match}) => {
@@ -33,6 +34,19 @@ const ProjectPage = ({match}) => {
 
 
     useEffect(() => {
+        window.onscroll = () => {
+            let currentScrollPosition = window.pageYOffset;
+            const logo = document.querySelector('#project-logo');
+
+            if (logo !== undefined && logo){
+                if (currentScrollPosition > "100"){
+                    logo.style.display = 'none';
+                }
+                else{
+                    logo.style.display = 'inline-block';
+                }
+            }
+        }
         gsap.from(reason, {opacity: 1, duration: 0.6, scale: 0.3});
         gsap.to(indicator, {duration: 2, y: 50, opacity: 0, ease: Power3.easeOut, repeatDelay: 0.2, repeat: -1});
         gsap.to(reason, {
@@ -70,7 +84,7 @@ const ProjectPage = ({match}) => {
                 </ProjectReason2>
                 <Indicator ref={el => indicator = el}/>
             </HeroWrapper>
-            <Icon href="/">
+            <Icon href="/" id='project-logo'>
                 <WevopsLogo alt="wevops logo"/>
             </Icon>
             <Link to='/works'><CloseButton>
@@ -101,7 +115,6 @@ const ProjectPage = ({match}) => {
             }
 
         </ProjectPageWrapper>
-
     )
 };
 

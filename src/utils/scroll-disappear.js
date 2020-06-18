@@ -1,5 +1,4 @@
 let previousScrollPosition = window.pageYOffset;
-
 window.onscroll = () => {
     let currentScrollPosition = window.pageYOffset;
     const navbar = document.querySelector("nav");
