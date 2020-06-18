@@ -7,7 +7,7 @@ const SectionList = ({resources}) => {
         if (resource.type === 'pic'){
             return <Section type='pic' source={resource.source} key={resource.id}/>
         }else if(resource.type === 'video'){
-            return <Section type='video' source={resource.source} key={resource.id}/>
+            return <Section type='video' source={resource.source} key={resource.id} loop={resource.loop}/>
         }
         return null;
     }) : <></>

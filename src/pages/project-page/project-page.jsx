@@ -4,7 +4,7 @@ import {
     HeroImage, HeroWrapper,
     Icon,
     ImageOverlay,
-    Indicator, LinkIcon, LinkSection, LinkText,
+    Indicator, LinkIcon, LinkSection, LinkText, Next, NextText, NextTitle,
     ProjectPageWrapper,
     ProjectReason2,
 } from "./project-page.style";
@@ -20,8 +20,11 @@ const ProjectPage = ({match}) => {
 
     let heroImage = false;
     let projectName = false;
+    let projectReason = '';
     let webLink = '';
     let projectResources = [];
+    let nextProjectName = '';
+    let nextProjectImage = '';
 
 
     const portfolioData = useContext(PortfolioContext);
@@ -45,8 +48,16 @@ const ProjectPage = ({match}) => {
         if (project.projectName === match.params.project) {
             heroImage = project.hero;
             projectName = project.projectName;
+            projectReason =project.projectReason;
             projectResources = project.projectResources;
             webLink = project.websiteLink;
+            const nextProjectId = project.index + 1;
+            if(portfolioData[nextProjectId] === portfolioData[-1]){
+                console.log()
+            }else{
+                nextProjectName = portfolioData[nextProjectId].projectName;
+                nextProjectImage = portfolioData[nextProjectId].hero;
+            }
         }
     });
     return (
@@ -55,7 +66,7 @@ const ProjectPage = ({match}) => {
                 <HeroImage src={heroImage} alt={`${projectName} project`}/>
                 <ImageOverlay/>
                 <ProjectReason2 ref={el => reason = el}>
-                    Web design for {projectName}
+                    {projectReason} for {projectName}
                 </ProjectReason2>
                 <Indicator ref={el => indicator = el}/>
             </HeroWrapper>
@@ -79,6 +90,16 @@ const ProjectPage = ({match}) => {
                     <LinkSvg/>
                 </LinkIcon>
             </LinkSection>
+            {
+                nextProjectName !== '' ? <Link to={`/works/${nextProjectName}`}>
+                    <Next>
+                        <HeroImage src={nextProjectImage} alt={`${nextProjectName} project`}/>
+                        <NextTitle>{nextProjectName}</NextTitle>
+                        <NextText>Next project</NextText>
+                    </Next>
+                </Link>: null
+            }
+
         </ProjectPageWrapper>
 
     )

@@ -11,6 +11,9 @@ export const ProjectPageWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  & *{
+  border-radius: 4px;
+  }
 `;
 export const HeroImage = styled.img`
   margin: 5vh;
@@ -19,16 +22,6 @@ export const HeroImage = styled.img`
   border-radius: 4px;
   max-height: 90vh;
   object-fit: cover;
-    &::before{
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.45);
-  width: 100%;
-  height: 100%;
-  }
 `;
 export const HeroWrapper = styled.div`
   position: relative;
@@ -39,7 +32,7 @@ export const HeroWrapper = styled.div`
 export const ImageOverlay = styled.div`
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.35);
+  background-color: rgba(0,0,0,0.54);
   position: absolute;
 `;
 export const Icon = styled(NavBarBrand)`
@@ -71,7 +64,7 @@ export const CloseButton = styled.div`
 export const ProjectReason2 = styled(ProjectReason)`
   position: absolute;
   z-index: 1;
-  font-size: 5vh;
+  font-size: 4.5vw;
   max-width: 70vw;
   text-align: center;
   @media only screen and (max-width: 1200px){
@@ -95,10 +88,14 @@ export const LinkSection = styled.div`
   border-radius: 4px;
   background-color: white;
   display: inline-flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
+  @media only screen and (min-width: 600px){
+  flex-direction: row;
+  }
 `;
 export const LinkText = styled.h3`
   color: black;
@@ -115,11 +112,11 @@ export const LinkText = styled.h3`
   fill: ${fadedBlack};
   }
 `;
-export const LinkIcon =  styled.div`
+export const LinkIcon = styled.div`
   & > svg{
   color: black;
   width: 50px;
-  margin-left: 30px;
+  margin-top: 30px;
   transform: rotate(90deg);
   overflow: visible;
   }
@@ -137,5 +134,42 @@ export const LinkIcon =  styled.div`
   0%{transform: translateX(0)}
   100%{transform: translateX(-100px);}
   }
-
+  @media only screen and (min-width: 600px){
+  margin-left: 30px;
+  margin-top: 0;
+  }
+`;
+export const Next = styled.div`
+  height: 50px;
+  border-radius: 4px;
+  background-color: black;
+  overflow-y: hidden;
+  cursor: pointer;
+  position: relative;
+  &:hover{
+  height: 100px;
+  top: -20px;
+  transition: top 1s ease-in-out;
+  }
+  & > img{
+  width: 90%;
+  margin: 0 5%;
+  filter: blur(2px);
+  transition: all 0.5s ease-in-out;
+  }
+  & > *:hover{
+  filter: blur(0);
+  }
+`;
+export const NextTitle = styled.h5`
+  font-size: ${typeScale.header5};
+  color: white;
+  position: absolute;
+  left: 10%;
+  top: 10px;
+  z-index: 2;
+`;
+export const NextText = styled(NextTitle)`
+  left: auto;
+  right: 10% !important;
 `;

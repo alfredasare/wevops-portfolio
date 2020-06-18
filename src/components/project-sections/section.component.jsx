@@ -3,7 +3,7 @@ import {SectionImage, SectionVideo, SectionWrapper} from "./section.style";
 import {viewportChecker} from "../../utils/viewport";
 
 
-const Section = ({type, source}) => {
+const Section = ({type, source, loop}) => {
     let videoRef = useRef(null);
 
     useEffect(() => {
@@ -25,7 +25,7 @@ const Section = ({type, source}) => {
         <SectionWrapper >
             {
                 type === 'video' ?
-                    <SectionVideo loop ref={el => videoRef = el} muted src={source} type="video/mp4" />
+                    <SectionVideo loop={loop} ref={el => videoRef = el} muted src={source} type="video/mp4" />
                     : <SectionImage src={source}/>
             }
         </SectionWrapper>
