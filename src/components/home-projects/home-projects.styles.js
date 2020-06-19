@@ -72,7 +72,7 @@ export const HorizontalLine = styled.hr`
 `;
 
 export const ProjectImages = styled.div`
-   height: 80vh;
+   height: 90vh;
    width: 90%;
    margin: 0 auto;
    background-color: white;
