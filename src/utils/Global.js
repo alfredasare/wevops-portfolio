@@ -53,4 +53,12 @@ export const GlobalStyle = createGlobalStyle`
         text-align: left;
     }
     
+    .home-project-image {
+      display: none;
+    }
+    
+    .home-project-image-active {
+      display: block;
+    }
+    
 `;

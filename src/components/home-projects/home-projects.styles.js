@@ -10,26 +10,22 @@ export const HomeProjectsContainer = styled.section`
 export const Wrapper = styled.div`
   width: 90%;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 8rem;
 `;
 
 export const TextContent = styled.div`
   height: 100vh;
   
-  //@media screen and (max-width: 320px) {
-  //  height: 100vh;
-  //}
-  //
-  //@media screen and (max-width: 360px) {
-  //  height: 100vh;
-  //}
-  //
   @media screen and (min-width: 361px) and (max-width: 520px) {
     height: 90vh;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     height: 50vh;
+  }
+  
+  @media screen and (width: 1024px) and (max-width: 1366px) {
+    height: 65vh;
   }
 `;
 
@@ -80,6 +76,7 @@ export const ProjectImages = styled.div`
    width: 90%;
    margin: 0 auto;
    background-color: white;
+   border-radius: 7px;
    
    @media screen and (max-width: 520px) {
     width: 100%;
@@ -92,4 +89,16 @@ export const ProjectImages = styled.div`
     margin: 0 0;
     height: 40vh;
    }
+   
+   @media screen and (width: 1024px) and (max-width: 1366px) {
+    height: 40vh;
+  }
+`;
+
+export const ProjectImage = styled.img`
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  border-radius: 7px;
 `;

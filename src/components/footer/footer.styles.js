@@ -178,6 +178,10 @@ export const CopyRight = styled.div`
 
 export const CopyRightText = styled.p`
   font-size: ${typeScale.paragraph};
+  
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    margin-top: 30px;
+  }
 `;
 
 export const FooterNavLinks = styled.div`
