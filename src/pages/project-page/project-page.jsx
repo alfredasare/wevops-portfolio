@@ -51,10 +51,10 @@ const ProjectPage = ({match}) => {
         }
 
         gsap.to(indicator, {duration: 2, y: 50, opacity: 0, ease: Power3.easeOut, repeatDelay: 0.2, repeat: -1});
-        if (window.screen.width <= 600){
+        if (window.screen.width <= 1200){
             gsap.from(reason, {opacity: 0, scale: 0.2, duration: 0.6,});
         }
-        if (window.screen.width > 600){
+        if (window.screen.width > 1200){
             console.log('ah');
             gsap.to(reason, {
                 scrollTrigger: {
