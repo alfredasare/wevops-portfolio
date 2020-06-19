@@ -29,7 +29,7 @@ const Section = ({type, source, loop}) => {
         <SectionWrapper >
             {
                 type === 'video' ?
-                    <SectionVideo loop={loop} playsinline ref={el => videoRef = el} muted src={source} type="video/mp4" />
+                    <SectionVideo loop={loop} playsInline ref={el => videoRef = el} muted src={source} type="video/mp4" />
                     : <SectionImage src={source}/>
             }
         </SectionWrapper>
