@@ -15,6 +15,7 @@ import {Link} from "react-router-dom";
 import "../../utils/scroll-disappear";
 import SectionList from "../../components/section-list/section-list.component";
 
+
 const ProjectPage = ({match}) => {
     let reason = useRef(null);
     let indicator = useRef(null);
@@ -34,7 +35,7 @@ const ProjectPage = ({match}) => {
 
 
     useEffect(() => {
-        window.onscroll = () => {
+        document.addEventListener('scroll', () => {
             let currentScrollPosition = window.pageYOffset;
             const logo = document.querySelector('#project-logo');
 
@@ -48,14 +49,13 @@ const ProjectPage = ({match}) => {
                     }
                 }
             }
-        }
+        })
 
         gsap.to(indicator, {duration: 2, y: 50, opacity: 0, ease: Power3.easeOut, repeatDelay: 0.2, repeat: -1});
         if (window.screen.width <= 1200){
             gsap.from(reason, {opacity: 0, scale: 0.2, duration: 0.6,});
         }
         if (window.screen.width > 1200){
-            console.log('ah');
             gsap.to(reason, {
                 scrollTrigger: {
                     trigger: reason,
@@ -76,7 +76,6 @@ const ProjectPage = ({match}) => {
             webLink = project.websiteLink;
             const nextProjectId = project.index + 1;
             if(portfolioData[nextProjectId] === portfolioData[-1]){
-                console.log()
             }else{
                 nextProjectName = portfolioData[nextProjectId].projectName;
                 nextProjectImage = portfolioData[nextProjectId].hero;

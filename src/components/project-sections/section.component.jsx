@@ -6,19 +6,23 @@ import {viewportChecker} from "../../utils/viewport";
 const Section = ({type, source, loop}) => {
     let videoRef = useRef(null);
 
+
     useEffect(() => {
         if (type === 'video'){
             if (videoRef !== null){
                 viewportChecker(videoRef) ? videoRef.play() : videoRef.pause();
-                window.onscroll = () => {
-                    viewportChecker(videoRef) ? videoRef.play() : videoRef.pause();
-                };
+                document.addEventListener('scroll', () => {
+                    if(videoRef !== null){
+                        viewportChecker(videoRef) ? videoRef.play() : videoRef.pause();
+                    }
+                })
             }
         }
         return () => {
             // console.log('cleanup');
-            window.onscroll = () => {
-            }
+            document.removeEventListener('scroll', () => {
+                viewportChecker(videoRef) ? videoRef.play() : videoRef.pause();
+            })
         }
     });
     return (
