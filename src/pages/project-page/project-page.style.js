@@ -40,6 +40,9 @@ export const Icon = styled(NavBarBrand)`
   left: 10px;
   top: 5%;
   width: 35px;
+  @media only screen and (min-width: 600px){
+  top: 50%;
+  }
 `;
 export const CloseButton = styled.div`
   width: 25px;
@@ -71,8 +74,7 @@ export const ProjectReason2 = styled(ProjectReason)`
   max-width: 70vw;
   text-align: center;
   @media only screen and (max-width: 1200px){
-  transform: none !important;
-  opacity: 1;
+  transform: scale(1)
   }
 `;
 export const Indicator = styled.div`
@@ -86,11 +88,11 @@ export const Indicator = styled.div`
 `;
 export const LinkSection = styled.div`
   width: 90%;
-  height: 50vh;
+  padding: 50px;
   margin-bottom: 50px;
   border-radius: 4px;
   background-color: white;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -100,9 +102,11 @@ export const LinkSection = styled.div`
   flex-direction: row;
   }
 `;
-export const LinkText = styled.h3`
+export const LinkText = styled.h4`
   color: black;
-  font-size: 6vw;
+  text-align: center;
+  margin: 0;
+  font-size: ${typeScale.header4};
   transition: all ease-in-out 0.5s;
   cursor: pointer;
   & *{
@@ -116,10 +120,11 @@ export const LinkText = styled.h3`
   }
 `;
 export const LinkIcon = styled.div`
+  height: min-content;
+  margin-top: 30px;
   & > svg{
   color: black;
-  width: 5vw;
-  margin-top: 30px;
+  width: ${typeScale.header4};
   transform: rotate(90deg);
   overflow: visible;
   }

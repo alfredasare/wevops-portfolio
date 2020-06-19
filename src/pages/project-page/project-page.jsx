@@ -39,23 +39,32 @@ const ProjectPage = ({match}) => {
             const logo = document.querySelector('#project-logo');
 
             if (logo !== undefined && logo){
-                if (currentScrollPosition > "100"){
-                    logo.style.display = 'none';
-                }
-                else{
-                    logo.style.display = 'inline-block';
+                if (window.screen.width < 600){
+                    if (currentScrollPosition > "100"){
+                        logo.style.display = 'none';
+                    }
+                    else{
+                        logo.style.display = 'inline-block';
+                    }
                 }
             }
         }
-        gsap.from(reason, {opacity: 1, duration: 0.6, scale: 0.3});
+
         gsap.to(indicator, {duration: 2, y: 50, opacity: 0, ease: Power3.easeOut, repeatDelay: 0.2, repeat: -1});
-        gsap.to(reason, {
-            scrollTrigger: {
-                trigger: reason, start: "bottom center",
-                scrub: true,
-                toggleActions: "restart pause reverse none"
-            }, opacity: 0, y: "40vh", duration: 7
-        })
+        if (window.screen.width <= 600){
+            gsap.from(reason, {opacity: 0, scale: 0.2, duration: 0.6,});
+        }
+        if (window.screen.width > 600){
+            console.log('ah');
+            gsap.to(reason, {
+                scrollTrigger: {
+                    trigger: reason,
+                    start: "bottom center",
+                    scrub: true,
+                    toggleActions: "restart pause reverse pause"
+                },  y: "40vh", opacity: 0, duration: 3,
+            })
+            }
     });
 
     portfolioData.forEach(project => {
