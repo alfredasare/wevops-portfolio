@@ -8,6 +8,14 @@ export const AboutSectionContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   position: relative;
+  
+  @media screen and (max-width: 320px) {
+    height: unset;
+  }
+  
+  @media screen and (width: 375px) and (height: 667px) {
+    height: 110vh;
+  }
 `;
 
 export const AboutSectionContent = styled.div`

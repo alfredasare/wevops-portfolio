@@ -140,6 +140,7 @@ export const CopyRightRow = styled.div`
   width: 100%;
   bottom: 5rem;
   padding-bottom: 50px;
+  position: absolute;
   
   @media screen and (max-width: 360px) {
     padding-bottom: 10px;
@@ -153,6 +154,15 @@ export const CopyRightRow = styled.div`
     flex-direction: column-reverse;
     align-items: center;
     bottom: 0;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1439px) {
+    padding-bottom: 20px;
+    flex-direction: column-reverse;
+    align-items: center;
+    bottom: 5rem;
+    width: 90%;
+    left: 5%;
   }
 `;
 
