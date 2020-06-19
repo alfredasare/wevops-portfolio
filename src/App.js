@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-        <ScrollToTop />
+        {/*<ScrollToTop />*/}
         <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/works' exact component={Works} />

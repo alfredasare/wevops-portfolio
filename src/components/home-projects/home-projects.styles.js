@@ -14,35 +14,39 @@ export const Wrapper = styled.div`
 `;
 
 export const TextContent = styled.div`
-  height: 100vh;
+  height: 60vh;
+  
+  @media screen and (max-width: 359px) {
+    height: 80vh;
+  }
   
   @media screen and (min-width: 361px) and (max-width: 520px) {
-    height: 90vh;
+    height: 70vh;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    height: 50vh;
+    height: 40vh;
   }
   
   @media screen and (width: 1024px) and (max-width: 1366px) {
-    height: 65vh;
+    height: 45vh;
   }
 `;
 
-export const MainHead = styled.h2`
+export const MainHead = styled.h3`
   padding-top: 5rem;
   width: 90%;
   margin: 0 auto;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: ${typeScale.header3};
   color: white;
   
   @media screen and (max-width: 320px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   
   @media screen and (min-width: 321px) and (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -50,14 +54,14 @@ export const MainContent = styled.div`
   color: white;
   width: 90%;
   margin: 3rem auto;
-  font-size: ${typeScale.header4};
+  font-size: ${typeScale.header5};
   
   @media screen and (max-width: 320px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   
   @media screen and (max-width: 768px) {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 `;
 
