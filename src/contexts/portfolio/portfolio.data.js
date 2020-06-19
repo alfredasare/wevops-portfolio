@@ -23,7 +23,8 @@ export const PORTFOLIO_DATA = [
             {
                 id: uuid(),
                 type: 'video',
-                source: require('../../assets/videos/chop-flix2.m4v'),
+                source: require('../../assets/videos/chop-flix2.mp4'),
+                poster: require('../../assets/images/chop-flix-poster.jpeg'),
                 loop: true,
             },
 
@@ -46,7 +47,8 @@ export const PORTFOLIO_DATA = [
             {
                 id: uuid(),
                 type: 'video',
-                source: require('../../assets/videos/design-studios.m4v'),
+                source: require('../../assets/videos/design-studios.mp4'),
+                poster: require('../../assets/images/design-studios-poster.jpeg'),
                 loop: false,
             },
             {
@@ -68,7 +70,8 @@ export const PORTFOLIO_DATA = [
             {
                 id: uuid(),
                 type: 'video',
-                source: require('../../assets/videos/edanra1.m4v'),
+                source: require('../../assets/videos/edanra1.mp4'),
+                poster: require('../../assets/images/edanra-poster1.jpeg'),
                 loop: false,
             },
             {
@@ -79,7 +82,8 @@ export const PORTFOLIO_DATA = [
             {
                 id: uuid(),
                 type: 'video',
-                source: require('../../assets/videos/edanra3.m4v'),
+                source: require('../../assets/videos/edanra3.mp4'),
+                poster: require('../../assets/images/edanra-poster2.jpeg'),
                 loop: false,
             },
         ],
