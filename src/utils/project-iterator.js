@@ -8,5 +8,5 @@ export const iterate = () => {
         allProjects[nextProject].classList.toggle("home-project-image-active");
         nextProject = nextProject === allProjects.length - 1 ? 0 : nextProject + 1;
         currentItem = currentItem === allProjects.length - 1 ? 0 : currentItem + 1;
-    }, 400);
+    }, 1000);
 };
