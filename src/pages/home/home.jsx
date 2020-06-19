@@ -5,6 +5,7 @@ import AboutSection from "../../components/about-section/about-section.component
 import TeamDescription from "../../components/team-description/team-description.component";
 import Footer from "../../components/footer/footer.component";
 import NavBar from "../../components/navbar/navbar.component";
+import HomeProjects from "../../components/home-projects/home-projects.component";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <LandingComponent />
             <AboutSection />
             <TeamDescription />
+            <HomeProjects />
             <Footer />
         </>
     );
