@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from "react";
 import {
+    Button,
     HomeProjectsContainer,
     HorizontalLine,
     MainContent,
@@ -9,6 +10,7 @@ import {
 } from "./home-projects.styles";
 import {iterate} from "../../utils/project-iterator";
 import PortfolioContext from "../../contexts/portfolio/portfolio.context";
+import {Link} from "react-router-dom";
 
 const HomeProjects = () => {
 
@@ -22,19 +24,21 @@ const HomeProjects = () => {
     return (
         <HomeProjectsContainer>
             <Wrapper>
-                <ProjectImages>
-                    {
-                        portfolioData.map(project => {
-                            return (
-                                <ProjectImage
-                                    key={project.id}
-                                    className="home-project-image"
-                                    src={project.hero}
-                                    alt={`Project ${project.projectName}`}/>
-                            );
-                        })
-                    }
-                </ProjectImages>
+                <Link to='/works'>
+                    <ProjectImages>
+                        {
+                            portfolioData.map(project => {
+                                return (
+                                    <ProjectImage
+                                        key={project.id}
+                                        className="home-project-image"
+                                        src={project.hero}
+                                        alt={`Project ${project.projectName}`}/>
+                                );
+                            })
+                        }
+                    </ProjectImages>
+                </Link>
                 <TextContent>
                     <MainHead>
                         We handle website design and creation with strict adherence to solid design fundamentals and
@@ -47,6 +51,11 @@ const HomeProjects = () => {
                         aliquam nihil provident soluta ut!
                     </MainContent>
                 </TextContent>
+                <Link to="/works">
+                    <Button>
+                        View Projects
+                    </Button>
+                </Link>
             </Wrapper>
             <HorizontalLine/>
         </HomeProjectsContainer>
@@ -54,3 +63,4 @@ const HomeProjects = () => {
 };
 
 export default HomeProjects
+

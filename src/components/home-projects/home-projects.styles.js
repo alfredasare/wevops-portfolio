@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {typeScale} from "../../utils";
+import {fadedBlack, typeScale} from "../../utils";
 
 export const HomeProjectsContainer = styled.section`
   height: auto;
@@ -14,30 +14,30 @@ export const Wrapper = styled.div`
 `;
 
 export const TextContent = styled.div`
-  height: 60vh;
+  //height: 60vh;
   
-  @media screen and (max-width: 359px) {
-    height: 80vh;
-  }
-  
-  @media screen and (min-width: 361px) and (max-width: 520px) {
-    height: 70vh;
-  }
+  //@media screen and (max-width: 359px) {
+  //  height: 80vh;
+  //}
+  //
+  //@media screen and (min-width: 361px) and (max-width: 520px) {
+  //  height: 70vh;
+  //}
 
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    height: 40vh;
-  }
+  //@media screen and (min-width: 768px) and (max-width: 1023px) {
+  //  height: 40vh;
+  //}
   
-  @media screen and (width: 1024px) and (max-width: 1366px) {
-    height: 45vh;
-  }
+  //@media screen and (width: 1024px) and (max-width: 1366px) {
+  //  height: 45vh;
+  //}
 `;
 
 export const MainHead = styled.h3`
   padding-top: 5rem;
   width: 90%;
   margin: 0 auto;
-  font-weight: bold;
+  //font-weight: bold;
   font-size: ${typeScale.header3};
   color: white;
   
@@ -51,7 +51,7 @@ export const MainHead = styled.h3`
 `;
 
 export const MainContent = styled.div`
-  color: white;
+  color: ${fadedBlack};
   width: 90%;
   margin: 3rem auto;
   font-size: ${typeScale.header5};
@@ -81,6 +81,7 @@ export const ProjectImages = styled.div`
    margin: 0 auto;
    background-color: white;
    border-radius: 7px;
+   cursor: pointer;
    
    @media screen and (max-width: 520px) {
     width: 100%;
@@ -105,4 +106,13 @@ export const ProjectImage = styled.img`
   object-position: center;
   height: 100%;
   border-radius: 7px;
+`;
+export const Button = styled.button`
+  padding: 15px 15px;
+  border: 1px solid white;
+  background: none;
+  color: white;
+  cursor: pointer;
+  margin: 1rem 5% 5rem;
+  outline: none;
 `;
