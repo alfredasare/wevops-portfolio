@@ -91,11 +91,11 @@ export const ProjectImages = styled.div`
    @media screen and (min-width: 521px) and (max-width: 768px) {
     width: 100%;
     margin: 0 0;
-    height: 40vh;
+    height: calc(40vh - 2vh);
    }
    
    @media screen and (width: 1024px) and (max-width: 1366px) {
-    height: 40vh;
+    height: calc(40vh - 2vh);
   }
 `;
 

@@ -5,7 +5,9 @@ export const FooterContainer = styled.footer`
   height: 100vh;
   background-color: black;
   color: white;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 `;
 
 export const FooterStatement = styled.div`
@@ -65,7 +67,7 @@ export const ContactRow = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 30px;
+    //margin-top: 30px;
   }
   
   @media screen and (min-width: 321px) and (max-width: 520px) {
@@ -76,12 +78,12 @@ export const ContactRow = styled.div`
   }
   
   @media screen and (min-width: 521px) and (max-width: 768px) {
-    margin-top: 20vh;
+    //margin-top: 20vh;
     width: 100%;
   }
   
   @media screen and (min-width: 769px) and (max-width: 1200px) {
-    margin-top: 20vh;
+    //margin-top: 20vh;
   }
 `;
 
@@ -128,6 +130,7 @@ export const EmailTelContainer = styled.h5`
     
     @media screen and (max-width: 520px) {
       text-align: center;
+      font-size: ${typeScale.paragraph};
     }
 `;
 
@@ -138,22 +141,18 @@ export const CopyRightRow = styled.div`
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  bottom: 5rem;
   padding-bottom: 50px;
-  position: absolute;
   
   @media screen and (max-width: 360px) {
     padding-bottom: 10px;
     flex-direction: column-reverse;
     align-items: center;
-    bottom: 0;
   }
   
   @media screen and (min-width: 361px) and (max-width: 520px) {
     padding-bottom: 20px;
     flex-direction: column-reverse;
     align-items: center;
-    bottom: 0;
   }
   
   @media screen and (min-width: 768px) and (max-width: 1439px) {
@@ -161,8 +160,6 @@ export const CopyRightRow = styled.div`
     flex-direction: column-reverse;
     align-items: center;
     bottom: 5rem;
-    width: 90%;
-    left: 5%;
   }
 `;
 
