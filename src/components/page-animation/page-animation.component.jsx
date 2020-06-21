@@ -4,23 +4,27 @@ import {gsap} from "gsap";
 
 const PageTransition = () => {
     let container = useRef(null);
+    const html = document.querySelector('html');
 
     useEffect(() => {
-        const html = document.querySelector('html');
         html.style.overflowY = 'hidden';
+    }, [html]);
+
+    useEffect(() => {
         const tiles = document.querySelectorAll('.tile');
         const fadeIn = () => {
-            gsap.to(tiles, {scaleY: 1, transformOrigin: 'left top', duration: 0.7, delay: 1,})
+            gsap.to(tiles, {scaleY: 1, transformOrigin: 'left top', duration: 0.7, delay: 0.5,})
             console.log('imma head out')
         }
         const fadeOut = () => {
-            gsap.to(tiles, {scaleX: 0, transformOrigin: 'right top', duration: 0.7, delay: 1, stagger: .2})
+            gsap.to(tiles, {scaleX: 0, transformOrigin: 'right top', duration: 0.7, delay: 0.5, stagger: .2})
             gsap.to(container, {scaleX: 0, transformOrigin: 'right top', delay: 1.7})
+            setTimeout(() => {
+                html.style.overflowY = 'scroll';
+            }, 2000)
         }
         fadeOut();
-        setTimeout(() => {
-            html.style.overflowY = 'scroll';
-        }, 2000)
+
         return () => {
             fadeIn();
         }
