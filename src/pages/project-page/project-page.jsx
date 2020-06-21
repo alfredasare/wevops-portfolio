@@ -14,6 +14,7 @@ import {gsap, ScrollTrigger, Power3} from "gsap/all";
 import {Link} from "react-router-dom";
 import "../../utils/scroll-disappear";
 import SectionList from "../../components/section-list/section-list.component";
+import {Helmet} from "react-helmet";
 
 
 const ProjectPage = ({match}) => {
@@ -83,6 +84,9 @@ const ProjectPage = ({match}) => {
     });
     return (
         <>
+            <Helmet>
+                <title>{projectName} | Wevops</title>
+            </Helmet>
             <ProjectPageWrapper>
                 <HeroWrapper>
                     <HeroImage src={heroImage} alt={`${projectName} project`}/>
