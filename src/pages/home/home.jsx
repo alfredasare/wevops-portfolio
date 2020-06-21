@@ -6,10 +6,12 @@ import TeamDescription from "../../components/team-description/team-description.
 import Footer from "../../components/footer/footer.component";
 import NavBar from "../../components/navbar/navbar.component";
 import HomeProjects from "../../components/home-projects/home-projects.component";
+import PageTransition from "../../components/page-animation/page-animation.component";
 
 const Home = () => {
     return (
         <>
+            <PageTransition/>
             <NavBar />
             <LandingComponent />
             <AboutSection />

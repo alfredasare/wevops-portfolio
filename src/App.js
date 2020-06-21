@@ -11,17 +11,16 @@ import Home from "./pages/home/home";
 
 
 function App() {
+
     return (
         <div className="App">
             <GlobalStyle/>
             <ScrollToTop/>
-            <div className="page">
             <Switch>
                 <Route exact path='/' component={Home}/>
                 <Route path='/works' exact component={Works}/>
                 <Route path='/works/:project' component={ProjectPage}/>
             </Switch>
-            </div>
         </div>
     );
 }
