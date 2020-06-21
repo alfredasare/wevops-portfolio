@@ -14,7 +14,6 @@ import {gsap, ScrollTrigger, Power3} from "gsap/all";
 import {Link} from "react-router-dom";
 import "../../utils/scroll-disappear";
 import SectionList from "../../components/section-list/section-list.component";
-import PageTransition from "../../components/page-animation/page-animation.component";
 
 
 const ProjectPage = ({match}) => {
@@ -84,7 +83,6 @@ const ProjectPage = ({match}) => {
     });
     return (
         <>
-            <PageTransition />
             <ProjectPageWrapper>
                 <HeroWrapper>
                     <HeroImage src={heroImage} alt={`${projectName} project`}/>
