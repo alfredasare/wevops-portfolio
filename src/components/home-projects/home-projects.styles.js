@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {fadedBlack, typeScale} from "../../utils";
+import {typeScale} from "../../utils";
 
 export const HomeProjectsContainer = styled.section`
   height: auto;
@@ -51,7 +51,7 @@ export const MainHead = styled.h3`
 `;
 
 export const MainContent = styled.div`
-  color: ${fadedBlack};
+  color: white;
   width: 90%;
   margin: 3rem auto;
   font-size: ${typeScale.header5};
@@ -115,4 +115,7 @@ export const Button = styled.button`
   cursor: pointer;
   margin: 1rem 5% 5rem;
   outline: none;
+  &:hover{
+  border: 1px solid transparent;
+  }
 `;

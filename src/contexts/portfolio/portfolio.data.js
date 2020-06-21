@@ -6,7 +6,7 @@ export const PORTFOLIO_DATA = [
         index: 0,
         projectName: 'Edanra',
         projectReason: 'Web development',
-        logo: require('../../assets/images/frlogistics_logo.png'),
+        logo: require('../../assets/images/edanra_logo.png'),
         hero: require('../../assets/images/edanra.jpg'),
         websiteLink: 'https://edanra.com',
         projectResources: [
@@ -63,7 +63,7 @@ export const PORTFOLIO_DATA = [
         index: 2,
         projectName: 'Design Studios',
         projectReason: 'Portfolio design',
-        logo: require('../../assets/images/chop_flix_logo.png'),
+        logo: require('../../assets/images/dp.png'),
         hero: require('../../assets/images/drvmroll.jpg'),
         websiteLink: 'https://drvmroll-design-portfolio.netlify.app/',
         projectResources: [

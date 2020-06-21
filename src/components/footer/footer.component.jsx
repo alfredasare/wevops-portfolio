@@ -20,7 +20,6 @@ const Footer = () => {
             <ContactRow>
                 <Address>
                     <p>Located at Lashibi Community 19, Accra</p>
-                    <p>or Abossey Okai, Accra</p>
                 </Address>
                 <SocialMediaContainer>
                     <SocialMediaUl>
@@ -40,7 +39,8 @@ const Footer = () => {
                 </SocialMediaContainer>
                 <EmailTelContainer>
                     <EmailTelItem>wevops@gmail.com</EmailTelItem>
-                    <EmailTelItem>+233501429666</EmailTelItem>
+                    <EmailTelItem>+233245027821</EmailTelItem>
+                    <EmailTelItem>+233506628889</EmailTelItem>
                 </EmailTelContainer>
             </ContactRow>
             <CopyRightRow>
@@ -49,9 +49,9 @@ const Footer = () => {
                 </CopyRight>
                 <FooterNavLinks>
                     <FooterNavLinkItem href="/#">Home</FooterNavLinkItem>
-                    <FooterNavLinkItem href="/#">Projects</FooterNavLinkItem>
-                    <FooterNavLinkItem href="/#">About</FooterNavLinkItem>
-                    <FooterNavLinkItem href="/#">Contact</FooterNavLinkItem>
+                    <FooterNavLinkItem href="/works">Projects</FooterNavLinkItem>
+                    <FooterNavLinkItem href="/#about">About</FooterNavLinkItem>
+                    <FooterNavLinkItem href="/#contact">Contact</FooterNavLinkItem>
                 </FooterNavLinks>
             </CopyRightRow>
         </FooterContainer>

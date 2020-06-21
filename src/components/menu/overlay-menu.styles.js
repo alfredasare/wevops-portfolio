@@ -32,10 +32,13 @@ export const StyledMenu = styled.div`
 `;
 export const MenuContent = styled.h4`
   color: white;
-  font-size: ${typeScale.header4};
+  font-size: ${typeScale.header5};
   margin-bottom: 10vh;
   cursor: pointer;
   &:hover{
   color: white !important;
+  }
+  @media only screen and (min-width: 600px){
+    font-size: ${typeScale.header4};
   }
 `;

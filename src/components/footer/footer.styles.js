@@ -127,6 +127,9 @@ export const SocialMediaLink = styled.a`
 export const EmailTelContainer = styled.h5`
     font-size: ${typeScale.header5};
     line-height: 1rem;
+    & > *:first-child{
+    margin-top: 16px;
+    }
     
     @media screen and (max-width: 520px) {
       text-align: center;

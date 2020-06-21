@@ -16,9 +16,9 @@ const TeamDescription = () => {
             <TeamDescriptionTextContainer>
                 <TeamDescriptionMainHead>A small team with big ideas</TeamDescriptionMainHead>
                 <TeamDescriptionText>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex expedita incidunt ipsam libero non
-                    provident repellat tempore voluptatibus. Adipisci asperiores ea excepturi labore molestiae mollitia
-                    nemo quam quod tempore ullam!
+                    We are a driven team, passionate about web design and development. We support
+                    businesses who are just starting out, or ones looking to grow, with creative and
+                     user-friendly work.
                 </TeamDescriptionText>
             </TeamDescriptionTextContainer>
         </TeamDescriptionContainer>

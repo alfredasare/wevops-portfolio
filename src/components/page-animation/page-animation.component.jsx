@@ -14,7 +14,6 @@ const PageTransition = () => {
         const tiles = document.querySelectorAll('.tile');
         const fadeIn = () => {
             gsap.to(tiles, {scaleY: 1, transformOrigin: 'left top', duration: 0.7, delay: 0.5,})
-            console.log('imma head out')
         }
         const fadeOut = () => {
             gsap.to(tiles, {scaleX: 0, transformOrigin: 'right top', duration: 0.7, delay: 0.5, stagger: .2})

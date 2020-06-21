@@ -18,17 +18,17 @@ const Header = () => {
             <TitleHeader ref={el => projects = el}>Projects</TitleHeader>
                 <TitleText className="content">
                             <span>
-                                Lorem ipsum dolor sit amet,
+                                We create beautiful,
                             </span>
                 </TitleText>
                 <TitleText className="content">
                             <span>
-                                consectetur adipisicing elit.
+                                responsive, user-friendly websites.
                             </span>
                 </TitleText>
                 <TitleText className="content">
                             <span>
-                                Accusantium alias
+                                 Wevops helps elevate your business.
                             </span>
                 </TitleText>
         </PageTitle>
