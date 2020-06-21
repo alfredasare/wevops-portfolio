@@ -18,7 +18,7 @@ const HomeProjects = () => {
 
     useEffect(() => {
         iterate();
-    });
+    }, []);
 
 
     return (
