@@ -6,8 +6,8 @@ export const ABOUT_DATA = [
         fadedTitle: "Who we are",
         title: "A top-class web design team",
         content: `Wevops is a group of very poised and talented web designers who use the most modern of technologies and 
-        best practices of web design to develop website for startups and full blown companies alike. We ensure users of 
-        our clients platform have the best of experiences.`
+        best practices of web design to develop websites for startups and full blown companies alike. We ensure users of 
+        our clients' platform have the best of experiences.`
     },
     {
         id: uuid(),
@@ -23,7 +23,7 @@ export const ABOUT_DATA = [
         fadedTitle: "Why select us",
         title: "We deliver",
         content: `We deliver user-friendly websites which are easy to navigate. We offer flawless
-        and eye catching web design and layout that leaving visitors of the site satisfied. Wevops ensures 
+        and eye catching web designs and layouts that leave visitors of the sites satisfied. Wevops ensures 
         your website is accessible on devices of all sizes such that users benefit fully no matter the device
          they use.`
     },
