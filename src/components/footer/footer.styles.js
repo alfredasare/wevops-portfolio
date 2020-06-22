@@ -128,7 +128,12 @@ export const EmailTelContainer = styled.h5`
     font-size: ${typeScale.header5};
     line-height: 1rem;
     & > *:first-child{
-    margin-top: 16px;
+    margin-top: 6px;
+    border: 1px solid white;
+    padding: 10px 20px;
+    }
+    & > *:first-child:hover{
+        border: 1px solid transparent;
     }
     
     @media screen and (max-width: 520px) {

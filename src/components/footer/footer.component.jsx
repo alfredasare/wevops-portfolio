@@ -54,7 +54,7 @@ const Footer = () => {
                     <FooterNavLinkItem href="/#">Home</FooterNavLinkItem>
                     <FooterNavLinkItem href="/works">Projects</FooterNavLinkItem>
                     <FooterNavLinkItem href="/#about">About</FooterNavLinkItem>
-                    <FooterNavLinkItem href="/#contact">Contact</FooterNavLinkItem>
+                    {/*<FooterNavLinkItem href="/#contact">Contact</FooterNavLinkItem>*/}
                 </FooterNavLinks>
             </CopyRightRow>
         </FooterContainer>
