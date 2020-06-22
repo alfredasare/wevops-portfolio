@@ -19,26 +19,29 @@ const Footer = () => {
             </FooterStatement>
             <ContactRow>
                 <Address>
-                    <p>Located at Lashibi Community 19, Accra</p>
+                    <p>Located at Lashibi, Tema Community 19, Accra</p>
                 </Address>
                 <SocialMediaContainer>
                     <SocialMediaUl>
                         <SocialMediaLinkItem>
-                            <SocialMediaLink href="/#">Twitter</SocialMediaLink>
+                            <SocialMediaLink href="https://twitter.com/_wevops" target="_blank">Twitter</SocialMediaLink>
                         </SocialMediaLinkItem>
                         <SocialMediaLinkItem>
-                            <SocialMediaLink href="/#">Facebook</SocialMediaLink>
+                            <SocialMediaLink href="https://web.facebook.com/Wevops-104263934675793" target="_blank">
+                                Facebook</SocialMediaLink>
                         </SocialMediaLinkItem>
                         <SocialMediaLinkItem>
-                            <SocialMediaLink href="/#">Instagram</SocialMediaLink>
+                            <SocialMediaLink href="https://www.instagram.com/wevops/" target="_blank">Instagram</SocialMediaLink>
                         </SocialMediaLinkItem>
                         <SocialMediaLinkItem>
-                            <SocialMediaLink href="/#">Behance</SocialMediaLink>
+                            <SocialMediaLink href="https://www.behance.net/wevops/" target="_blank">Behance</SocialMediaLink>
                         </SocialMediaLinkItem>
                     </SocialMediaUl>
                 </SocialMediaContainer>
                 <EmailTelContainer>
-                    <EmailTelItem>wevops@gmail.com</EmailTelItem>
+                    <EmailTelItem
+                        href="mailto:w3vops@gmail.com?subject=Let%20us%20collaborate%20to%20build%20a%20website"
+                        target="_blank">w3vops@gmail.com</EmailTelItem>
                     <EmailTelItem>+233245027821</EmailTelItem>
                     <EmailTelItem>+233506628889</EmailTelItem>
                 </EmailTelContainer>

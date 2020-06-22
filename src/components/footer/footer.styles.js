@@ -137,7 +137,12 @@ export const EmailTelContainer = styled.h5`
     }
 `;
 
-export const EmailTelItem = styled.p``;
+export const EmailTelItem = styled.a`
+  display: block;
+  margin-bottom: 18px;
+  cursor: pointer;
+  color: white;
+`;
 
 export const CopyRightRow = styled.div`
   display: flex;
